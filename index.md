@@ -1,3 +1,3 @@
-# sudo.mengw.io
+# Sudoo Packages Blog & Case Study
 
-## Sudoo Packages Case Study
+-   [Use `@sudoo/quest` for Path Finding](./blog/use-quest-for-path-finding)
