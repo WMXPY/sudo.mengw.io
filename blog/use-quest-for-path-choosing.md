@@ -17,3 +17,50 @@ export const handleRequest = async (req) => {
     return await getPartialResult();
 };
 ```
+
+This way is very effective until the request becomes complicated, and more importantly, these conditions cannot be reused gracefully in different APIs.
+
+## The `@sudoo/quest` Way
+
+```ts
+import { Quest } from "@sudoo/quest";
+
+export const handleRequest = async (req) => {
+
+    const quest = questDistributer.distribute();
+    quest.requires('user has permission', (req) => {
+        return req.token.hasPermission(something);
+    });
+
+    if(quest.isCompleted) {
+        return await getAllResult();
+    }
+    return await getPartialResult();
+};
+```
+
+Implementing same feature, we use more code, but in fact, in different APIs, we can use quest distributer to extract the reused part.
+
+```ts
+// Another File
+import { QuestDistributer } from "@sudoo/quest";
+
+export const questDistributer = QuestDistributer.create();
+quest.requires('user has permission', (req) => {
+    return req.token.hasPermission(something);
+});
+
+// API File
+import { questDistributer } from "./other";
+
+export const handleRequest = async (req) => {
+
+    const quest = questDistributer.distribute();
+    quest.execute(req);
+
+    if(quest.isCompleted) {
+        return await getAllResult();
+    }
+    return await getPartialResult();
+};
+```
