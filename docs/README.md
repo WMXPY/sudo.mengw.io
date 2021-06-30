@@ -1,3 +1,3 @@
 # sudo.mengw.io
 
-Blog for Sudo
+Visit [Sudoo Packages Blog & Case Study](https://sudo.mengw.io) website at [`https://sudo.mengw.io`](https://sudo.mengw.io).
