@@ -22,6 +22,14 @@ This way is very effective until the request becomes complicated, and more impor
 
 ## The `@sudoo/quest` Way
 
+Install `@sudoo/quest` is easy, simply run the following command in your project folder.
+
+```sh
+yarn add @sudoo/quest
+# Or
+npm install @sudoo/quest --save
+```
+
 ```ts
 import { Quest } from "@sudoo/quest";
 
