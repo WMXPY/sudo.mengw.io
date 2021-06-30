@@ -4,4 +4,5 @@
 
 ## Case Studies
 
+-   [Generate uuid with `@sudoo/uuid`](./blog/generate-uuid-with-uuid)
 -   [Use `@sudoo/quest` for Path Choosing](./blog/use-quest-for-path-choosing)

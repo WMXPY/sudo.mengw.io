@@ -19,7 +19,7 @@ yarn add @sudoo/uuid
 npm install @sudoo/uuid --save
 ```
 
-Use the package, is also simple.
+Use the package is also simple.
 
 The following example shows how to create V1 uuid with `@sudoo/uuid`. V1 uuid generate by current timestamp, sequence, and random node number. Also, all uuid has technic to preset its uuid version number. 
 
@@ -36,7 +36,7 @@ uuid.toBraceString(): // {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
 uuid.toUnifiedResourceString(): // urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-V4 uuid is fully random, use the following code to generate V4 uuid with `@sudoo/uuid`.
+V4 uuid is generated entirely with random numbers. Use the following code to generate V4 uuid with `@sudoo/uuid`.
 
 ```ts
 import { UUID, UUIDVersion4 } from "@sudoo/uuid";
