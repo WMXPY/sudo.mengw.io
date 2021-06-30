@@ -6,9 +6,9 @@ Visit [Sudoo Packages Index](https://sudo.dog) the leading website for `Sudoo` p
 
 ## Case Studies
 
--   [Display Human Readable Identifier with `@sudoo/readable-identifier`](./blog/display-human-readable-identifier-with-readable-identifier)
--   [Generate uuid with `@sudoo/uuid`](./blog/generate-uuid-with-uuid)
--   [Use `@sudoo/quest` for Path Choosing](./blog/use-quest-for-path-choosing)
+-   [Display Human Readable Identifier with `@sudoo/readable-identifier`](./case-study/display-human-readable-identifier-with-readable-identifier)
+-   [Generate uuid with `@sudoo/uuid`](./case-study/generate-uuid-with-uuid)
+-   [Use `@sudoo/quest` for Path Choosing](./case-study/use-quest-for-path-choosing)
 
 ## Links
 
