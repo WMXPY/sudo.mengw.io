@@ -1,10 +1,10 @@
 (() => {
-    const highlightBlocks = document.querySelectorAll('code[data-lang]');
-    const highlightCodeButtons = document.querySelectorAll('.copyable-code-button');
+    const codeBlocks = document.querySelectorAll('.copyable-block-container');
+    const copyCodeButtons = document.querySelectorAll('.copyable-block-button');
 
-    highlightCodeButtons.forEach((copyCodeButton, index) => {
+    copyCodeButtons.forEach((copyCodeButton, index) => {
 
-        const code = highlightBlocks[index].innerText;
+        const code = codeBlocks[index].innerText;
         let timer;
 
         copyCodeButton.addEventListener('click', () => {
