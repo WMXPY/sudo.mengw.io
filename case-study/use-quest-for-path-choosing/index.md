@@ -13,15 +13,10 @@ In web back-end applications, there are many behaviors that change according to 
 
 For example, in NodeJS, we can use the following code to do that.
 
-```ts
-export const handleRequest = async (req) => {
-
-    if(req.token.hasPermission(something)) {
-        return await getAllResult();
-    }
-    return await getPartialResult();
-};
-```
+{% include copyable-highlight.html
+    language="typescript"
+    file="old-way.ts"
+%}
 
 This way is very effective until the request becomes complicated, and more importantly, these conditions cannot be reused gracefully in different APIs.
 
@@ -29,51 +24,21 @@ This way is very effective until the request becomes complicated, and more impor
 
 Install `@sudoo/quest` is easy, simply run the following command in your project folder.
 
-```sh
-yarn add @sudoo/quest
-# Or
-npm install @sudoo/quest --save
-```
+{% include copyable-highlight.html
+    language="shell"
+    file="install-quest.sh"
+%}
 
-```ts
-import { Quest } from "@sudoo/quest";
+{% include curl-link.html file="install-quest.sh" %}
 
-export const handleRequest = async (req) => {
-
-    const quest = questDistributer.distribute();
-    quest.requires('user has permission', (req) => {
-        return req.token.hasPermission(something);
-    });
-
-    if(quest.isCompleted) {
-        return await getAllResult();
-    }
-    return await getPartialResult();
-};
-```
+{% include copyable-highlight.html
+    language="typescript"
+    file="example-1.ts"
+%}
 
 Implementing same feature, we use more code, but in fact, in different APIs, we can use quest distributer to extract the reused part.
 
-```ts
-// Another File
-import { QuestDistributer } from "@sudoo/quest";
-
-export const questDistributer = QuestDistributer.create();
-quest.requires('user has permission', (req) => {
-    return req.token.hasPermission(something);
-});
-
-// API File
-import { questDistributer } from "./other";
-
-export const handleRequest = async (req) => {
-
-    const quest = questDistributer.distribute();
-    quest.execute(req);
-
-    if(quest.isCompleted) {
-        return await getAllResult();
-    }
-    return await getPartialResult();
-};
-```
+{% include copyable-highlight.html
+    language="typescript"
+    file="example-2.ts"
+%}

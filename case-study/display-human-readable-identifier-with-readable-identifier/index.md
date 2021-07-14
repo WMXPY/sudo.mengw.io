@@ -17,47 +17,34 @@ However, it is unfriendly to display meaningless strings to end-users. For non-d
 
 Install `@sudoo/readable-identifier` is easy. Simply run the following command in your project folder.
 
-```sh
-yarn add @sudoo/readable-identifier
-# Or
-npm install @sudoo/readable-identifier --save
-```
+{% include copyable-highlight.html
+    language="shell"
+    file="install-readable-identifier.sh"
+%}
+
+{% include curl-link.html file="install-readable-identifier.sh" %}
 
 Also, if no `@sudoo/words` dictionary instance is created or planned to be created. We also provide `@sudoo/words-english` as the default dictionary for identifier generation. Install it with the following commands.
 
-```sh
-yarn add @sudoo/words-english
-# Or
-npm install @sudoo/words-english --save
-```
+{% include copyable-highlight.html
+    language="shell"
+    file="install-words-english.sh"
+%}
+
+{% include curl-link.html file="install-words-english.sh" %}
 
 A generate instance can create any `@sudoo/words` dictionary instance.
 
-```ts
-import { ReadableIdentifierGenerator } from "@sudoo/readable-identifier";
-import { englishWords } from "@sudoo/words-english";
-
-export const readableIdentifierGenerator = ReadableIdentifierGenerator.from(englishWords);
-
-// With Config
-export const capitalReadableIdentifierGenerator = ReadableIdentifierGenerator.from(englishWords, {
-    join: " ",
-    capital: true,
-});
-```
+{% include copyable-highlight.html
+    language="typescript"
+    file="example-1.ts"
+%}
 
 That's it. All setup is completed. We not can use the generator everywhere else.
 
-```ts
-import { readableIdentifierGenerator, capitalReadableIdentifierGenerator } from "./your-generator-path";
-
-const identifier: string = "Your Awesome Identifier";
-
-readableIdentifierGenerator.generatePair(identifier); // worthless-lamb
-readableIdentifierGenerator.generateTuple(identifier); // oceanic-consist-france
-
-capitalReadableIdentifierGenerator.generatePair(identifier);  // Worthless Lamb
-capitalReadableIdentifierGenerator.generateTuple(identifier); // Oceanic Consist France
-```
+{% include copyable-highlight.html
+    language="typescript"
+    file="example-2.ts"
+%}
 
 For the same dictionary and identifier, the generation result will always be identical, so it's safe to use the readable identifier to represent your data resource.

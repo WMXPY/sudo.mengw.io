@@ -18,38 +18,25 @@ Compared with other ID generation methods, UUID does not need to rely on other p
 
 `@sudoo/uuid` has not extra dependencies. Use the following code in your project to install.
 
-```sh
-yarn add @sudoo/uuid
-# Or
-npm install @sudoo/uuid --save
-```
+{% include copyable-highlight.html
+    language="shell"
+    file="install-uuid.sh"
+%}
+
+{% include curl-link.html file="install-uuid.sh" %}
 
 Use the package is also simple.
 
 The following example shows how to create V1 uuid with `@sudoo/uuid`. V1 uuid generate by current timestamp, sequence, and random node number. Also, all uuid has technic to preset its uuid version number. 
 
-```ts
-import { UUID, UUIDVersion1 } from "@sudoo/uuid";
-
-const stringUUID: string = UUIDVersion1.generateString(); // xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-const stringUUID: string = UUIDVersion1.generateString(new Date()); // Override time stamp
-
-const uuid: UUID = UUIDVersion1.generate(); // Instance
-const uuid: UUID = UUIDVersion1.generate(new Date()); // Override time stamp
-uuid.toString(); // xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-uuid.toBraceString(): // {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
-uuid.toUnifiedResourceString(): // urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-```
+{% include copyable-highlight.html
+    language="typescript"
+    file="example-1.ts"
+%}
 
 V4 uuid is generated entirely with random numbers. Use the following code to generate V4 uuid with `@sudoo/uuid`.
 
-```ts
-import { UUID, UUIDVersion4 } from "@sudoo/uuid";
-
-const stringUUID: string = UUIDVersion4.generateString(); // xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-
-const uuid: UUID = UUIDVersion4.generate(); // Instance
-uuid.toString(); // xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-uuid.toBraceString(): // {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
-uuid.toUnifiedResourceString(): // urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-```
+{% include copyable-highlight.html
+    language="typescript"
+    file="example-2.ts"
+%}
