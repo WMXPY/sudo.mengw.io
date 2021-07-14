@@ -1,3 +1,8 @@
+---
+title: Use @sudoo/quest for Path Choosing
+layout: default
+---
+
 # Use `@sudoo/quest` for Path Choosing
 
 View document of `@sudoo/quest` at <https://quest.sudo.dog>

@@ -1,3 +1,8 @@
+---
+title: Generate UUID with @sudoo/uuid
+layout: default
+---
+
 # Generate UUID with `@sudoo/uuid`
 
 View document of `@sudoo/uuid` at <https://uuid.sudo.dog>

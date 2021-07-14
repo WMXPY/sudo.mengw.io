@@ -1,3 +1,8 @@
+---
+title: Display Human Readable Identifier with @sudoo/readable-identifier
+layout: default
+---
+
 # Display Human Readable Identifier with `@sudoo/readable-identifier`
 
 View document of `@sudoo/readable-identifier` at <https://readable-identifier.sudo.dog>

@@ -1,3 +1,8 @@
+---
+title: Sudoo Packages Blog & Case Study
+layout: home
+---
+
 # Sudoo Packages Blog & Case Study
 
 `Sudoo` Packages uses a well-designed API to help JS/TS developers write more elegant code.
