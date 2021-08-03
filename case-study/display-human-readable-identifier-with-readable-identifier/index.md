@@ -17,21 +17,15 @@ However, it is unfriendly to display meaningless strings to end-users. For non-d
 
 Install `@sudoo/readable-identifier` is easy. Simply run the following command in your project folder.
 
-{% include copyable-highlight.html
-    language="shell"
-    file="install-readable-identifier.sh"
+{% include copyable-npm-package.html
+    package="@sudoo/readable-identifier"
 %}
-
-{% include curl-link.html file="install-readable-identifier.sh" %}
 
 Also, if no `@sudoo/words` dictionary instance is created or planned to be created. We also provide `@sudoo/words-english` as the default dictionary for identifier generation. Install it with the following commands.
 
-{% include copyable-highlight.html
-    language="shell"
-    file="install-words-english.sh"
+{% include copyable-npm-package.html
+    package="@sudoo/words-english"
 %}
-
-{% include curl-link.html file="install-words-english.sh" %}
 
 A generate instance can create any `@sudoo/words` dictionary instance.
 
