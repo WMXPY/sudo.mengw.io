@@ -18,12 +18,9 @@ Compared with other ID generation methods, UUID does not need to rely on other p
 
 `@sudoo/uuid` has not extra dependencies. Use the following code in your project to install.
 
-{% include copyable-highlight.html
-    language="shell"
-    file="install-uuid.sh"
+{% include copyable-npm-package.html
+    package="@sudoo/uuid"
 %}
-
-{% include curl-link.html file="install-uuid.sh" %}
 
 Use the package is also simple.
 
