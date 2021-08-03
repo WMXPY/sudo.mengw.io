@@ -24,12 +24,9 @@ This way is very effective until the request becomes complicated, and more impor
 
 Install `@sudoo/quest` is easy, simply run the following command in your project folder.
 
-{% include copyable-highlight.html
-    language="shell"
-    file="install-quest.sh"
+{% include copyable-npm-package.html
+    package="@sudoo/quest"
 %}
-
-{% include curl-link.html file="install-quest.sh" %}
 
 {% include copyable-highlight.html
     language="typescript"
